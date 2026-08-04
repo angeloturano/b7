@@ -1,0 +1,351 @@
+:root {
+  --black: #050505;
+  --panel: #0b0b0b;
+  --gold: #ffb612;
+  --gold-soft: #ffd45a;
+  --white: #fffdf5;
+  --muted: #b9b09b;
+  --line: rgba(255,182,18,.24);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 28px clamp(22px, 5vw, 72px) 34px;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background: url("/ben-hero.png") center 32% / cover no-repeat;
+  transform: scale(1.02);
+}
+
+.heroShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.98) 0%, rgba(0,0,0,.9) 38%, rgba(0,0,0,.4) 72%, rgba(0,0,0,.12) 100%),
+    linear-gradient(0deg, rgba(0,0,0,.9), transparent 42%);
+}
+
+nav,
+.heroContent,
+.heroFooter {
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.brand { color: var(--gold); }
+
+.heroContent {
+  align-self: center;
+  max-width: 880px;
+  padding: 80px 0 60px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .22em;
+}
+
+h1 {
+  margin: 18px 0 24px;
+  font-size: clamp(4.2rem, 12vw, 10rem);
+  line-height: .8;
+  letter-spacing: -.085em;
+  text-transform: uppercase;
+}
+
+h1 span {
+  display: block;
+  color: var(--gold);
+}
+
+.heroCopy {
+  max-width: 610px;
+  color: #ddd5c0;
+  font-size: clamp(1rem, 2vw, 1.24rem);
+  line-height: 1.65;
+}
+
+.button {
+  display: inline-flex;
+  margin-top: 20px;
+  padding: 15px 22px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #050505;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 14px 34px rgba(255,182,18,.2);
+}
+
+.button:hover { background: var(--gold-soft); }
+
+.heroFooter {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,.2);
+}
+
+.heroFooter > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.heroFooter small {
+  color: var(--muted);
+  font-size: .68rem;
+  letter-spacing: .15em;
+}
+
+.heroFooter strong { font-size: 1.05rem; }
+
+.mark {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  color: rgba(255,182,18,.48);
+  font-weight: 950;
+  line-height: .76;
+  letter-spacing: -.08em;
+}
+
+.plan {
+  width: min(1180px, calc(100% - 34px));
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+.intro h2,
+.closing h2 {
+  margin: 16px 0 58px;
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  line-height: .9;
+  letter-spacing: -.07em;
+}
+
+.cards {
+  display: grid;
+  gap: 22px;
+}
+
+.dayCard {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background:
+    linear-gradient(135deg, rgba(255,182,18,.08), rgba(255,255,255,.02) 54%),
+    var(--panel);
+}
+
+.dayCard::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(var(--gold), rgba(255,182,18,.15));
+}
+
+.dayTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.dayMeta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.dayMeta p {
+  margin: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.dayMeta small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.dayNumber {
+  font-size: 4rem;
+  line-height: .8;
+  font-weight: 950;
+  color: rgba(255,182,18,.38);
+  letter-spacing: -.08em;
+}
+
+.tag {
+  align-self: flex-start;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,182,18,.08);
+  color: var(--gold);
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.dayCard h3 {
+  margin: 54px 0 26px;
+  font-size: clamp(2.3rem, 5vw, 4.3rem);
+  letter-spacing: -.055em;
+}
+
+.events { border-top: 1px solid var(--line); }
+
+.event {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  gap: 28px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event time {
+  color: var(--gold);
+  font-size: .76rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.event h4 {
+  margin: 0 0 7px;
+  font-size: 1.08rem;
+}
+
+.event p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.closing {
+  margin-top: 110px;
+  padding: clamp(28px, 5vw, 64px);
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 78% 20%, rgba(255,182,18,.15), transparent 20rem),
+    #090909;
+}
+
+.closing h2 {
+  margin-bottom: 0;
+}
+
+.closing h2 span { color: var(--gold); }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 34px clamp(22px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 92svh;
+    padding-inline: 18px;
+  }
+
+  .heroImage {
+    background-position: 64% 50%;
+  }
+
+  .heroShade {
+    background:
+      linear-gradient(0deg, rgba(0,0,0,.96) 0%, rgba(0,0,0,.72) 52%, rgba(0,0,0,.22) 100%),
+      linear-gradient(90deg, rgba(0,0,0,.7), transparent);
+  }
+
+  nav span:last-child { display: none; }
+
+  h1 { font-size: clamp(3.4rem, 18vw, 6rem); }
+
+  .heroContent {
+    align-self: end;
+    padding: 160px 0 50px;
+  }
+
+  .plan {
+    width: min(100% - 24px, 1180px);
+    padding: 84px 0;
+  }
+
+  .event {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
