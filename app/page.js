@@ -130,7 +130,7 @@ export default function Home() {
         </nav>
 
         <div className="heroContent">
-          <p className="eyebrow">BLACK & GOLD WEEKEND</p>
+          
 
           <h1>
             Pittsburgh
@@ -158,15 +158,7 @@ export default function Home() {
       </section>
 
       <section id="plan" className="plan">
-        <div className="intro reveal">
-          <p className="eyebrow">THE PLAN</p>
 
-          <h2>
-            Four days.
-            <br />
-            Zero wasted time.
-          </h2>
-        </div>
 
         <div className="cards">
           {days.map((day) => (
