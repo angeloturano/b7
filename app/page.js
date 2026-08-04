@@ -10,11 +10,11 @@ const days = [
     tag: "Arrival",
     title: "Convoy to Pittsburgh",
     events: [
-      ["8:00 AM", "Meet at Sourdough Garden", "Breakfast sandwich, coffee, and cookie for everyone. Al will get a pack of beef jerky."],
-      ["8:30 AM", "Convoy down", "Approximately 5.5 hours on the road. Target arrival at the Airbnb by 3:00 PM."],
-      ["3:00 PM", "Check in", "1824 Sidney Street. Unpack & settle in."],
+      ["8:00 AM", "Meet at Sourdough Garden", "Everyone will receive a breakfast sandwich, coffee, and cookie. Zmou will get a pack of beef jerky."],
+      ["8:30 AM", "Convoy down", "~5.5 hours on the road."],
+      ["3:00 PM", "Check into BNB", "1824 Sidney Street. Unpack & settle in."],
       ["7:00 PM", "Dinner at Eddie V’s"],
-      ["Night", "South Side Bars", "Explore the South Side, Dee's Cafe, Karaoke, Scout the best spots for the weekend, ."]
+      ["Night", "South Side Bars", "Explore the South Side, Dee's Cafe, Jekyll and Hyde’s Karaoke, Scout the best spots for the weekend."]
     ]
   },
   {
@@ -24,10 +24,11 @@ const days = [
     tag: "Adventure",
     title: "Whitewater day",
     events: [
-      ["8:00 AM", "Wake up", "Departure by 8:30 AM for 103 Garrett Street, Ohiopyle."],
+      ["8:00 AM", "Wake up", "Departure by 8:15 AM for 103 Garrett Street, Ohiopyle."],
       ["10:00 AM", "Rafting begins", "Whitewater rafting and a full day on the river."],
+      ["Drive Back", "Pizza Lupo on the way back?"],
       ["5:00 PM", "Back at the Airbnb", "Rest, shower, and reset."],
-      ["Night", "Rivers Casino", "Casino night on the North Shore."]
+      ["Night", "BET RIVERS CASINO", "Someone is due to win BIG."]
     ]
   },
   {
@@ -35,23 +36,22 @@ const days = [
     day: "Saturday",
     date: "August 8",
     tag: "Game Day",
-    title: "Baseball + bottles",
+    title: "Church + Baseball",
     events: [
-      ["Daytime", "Rest and reset", "Recover, eat, hydrate, and prepare for the main event."],
-      ["4:00 PM", "Mass at St. Paul Cathedral", "A calm moment before the evening gets louder."],
-      ["6:40 PM", "Pirates game at PNC Park", "Baseball with one of the best skyline views in the city."],
-      ["Night", "North Shore night", "Booth, bottles, and the official bachelor-party send-off."]
+      ["Morning to Afternoon", "Rest and reset", "Recover, eat, hydrate with purple powerade, mossmans"],
+      ["4:00 PM", "Mass at St. Paul Cathedral"],
+      ["6:40 PM", "Pirates game at PNC Park", "Ranked the #1 Park in America."],
+      ["Night", "North Shore night", "Booth & Bottles."]
     ]
   },
   {
     number: "04",
     day: "Sunday",
     date: "August 9",
-    tag: "Recovery",
+    tag: "Home",
     title: "The journey home",
     events: [
-      ["Morning", "Tough morning", "Water, coffee, breakfast, and a slow inventory of everyone’s belongings."],
-      ["After", "Drive home", "Convoy back to Toronto with stories that will improve over time."]
+      ["Morning", "Convoy back to Toronto with some good stories."]
     ]
   }
 ];
@@ -138,16 +138,6 @@ export default function Home() {
             </article>
           ))}
         </div>
-
-        <section className="closing reveal">
-          <p className="eyebrow">THE SEND-OFF</p>
-          <h2>
-            Good times.<br />
-            Great friends.<br />
-            <span>Unforgettable memories.</span>
-          </h2>
-        </section>
-      </section>
 
       <footer>
         <span>BLACK & GOLD WEEKEND</span>
