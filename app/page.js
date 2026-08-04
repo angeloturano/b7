@@ -10,26 +10,54 @@ const days = [
     tag: "Arrival",
     title: "Convoy to Pittsburgh",
     events: [
-      ["8:00 AM", "Meet at Sourdough Garden", "Everyone will receive a breakfast sandwich, coffee, and cookie. Zmou will get a pack of beef jerky."],
+      [
+        "8:00 AM",
+        "Meet at Sourdough Garden",
+        "Everyone will receive a breakfast sandwich, coffee, and cookie. Zmou will get a pack of beef jerky.",
+      ],
       ["8:30 AM", "Convoy down", "~5.5 hours on the road."],
-      ["3:00 PM", "Check into BNB", "1824 Sidney Street. Unpack & settle in."],
+      [
+        "3:00 PM",
+        "Check into Airbnb",
+        "1824 Sidney Street. Unpack and settle in.",
+      ],
       ["7:00 PM", "Dinner at Eddie V’s"],
-      ["Night", "South Side Bars", "Explore the South Side, Dee's Cafe, Jekyll and Hyde’s Karaoke, Scout the best spots for the weekend."]
-    ]
+      [
+        "Night",
+        "South Side bars",
+        "Explore the South Side, Dee’s Cafe, Jekyll & Hyde’s karaoke, and scout the best spots for the weekend.",
+      ],
+    ],
   },
   {
     number: "02",
     day: "Friday",
     date: "August 7",
     tag: "Adventure",
-    title: "Whitewater day",
+    title: "Whitewater Day",
     events: [
-      ["8:00 AM", "Wake up", "Departure by 8:15 AM for 103 Garrett Street, Ohiopyle."],
-      ["10:00 AM", "Rafting begins", "Whitewater rafting and a full day on the river."],
+      [
+        "8:00 AM",
+        "Wake up",
+        "Departure by 8:15 AM for 103 Garrett Street, Ohiopyle.",
+      ],
+      [
+        "10:00 AM",
+        "Rafting begins",
+        "Whitewater rafting and a full day on the river.",
+      ],
       ["Drive Back", "Pizza Lupo on the way back?"],
-      ["5:00 PM", "Back at the Airbnb", "Rest, shower, and reset."],
-      ["Night", "BET RIVERS CASINO", "Someone is due to win BIG."]
-    ]
+      [
+        "5:00 PM",
+        "Back at the Airbnb",
+        "Rest, shower, and reset.",
+      ],
+      [
+        "Night",
+        "Rivers Casino",
+        "Someone is due to win big.",
+      ],
+    ],
   },
   {
     number: "03",
@@ -38,35 +66,56 @@ const days = [
     tag: "Game Day",
     title: "Church + Baseball",
     events: [
-      ["Morning to Afternoon", "Rest and reset", "Recover, eat, hydrate with purple powerade, mossmans"],
+      [
+        "Morning to Afternoon",
+        "Rest and reset",
+        "Recover, eat, hydrate with purple Powerade, and Mossman’s.",
+      ],
       ["4:00 PM", "Mass at St. Paul Cathedral"],
-      ["6:40 PM", "Pirates game at PNC Park", "Ranked the #1 Park in America."],
-      ["Night", "North Shore night", "Booth & Bottles."]
-    ]
+      [
+        "6:40 PM",
+        "Pirates game at PNC Park",
+        "Ranked the #1 ballpark in America.",
+      ],
+      ["Night", "North Shore night", "Booth and bottles."],
+    ],
   },
   {
     number: "04",
     day: "Sunday",
     date: "August 9",
     tag: "Home",
-    title: "The journey home",
+    title: "The Journey Home",
     events: [
-      ["Morning", "Convoy back to Toronto with some good stories."]
-    ]
-  }
+      [
+        "Morning",
+        "Drive home",
+        "Convoy back to Toronto with some good stories.",
+      ],
+    ],
+  },
 ];
 
 export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
-      entries => entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("visible");
-      }),
+      (entries) =>
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        }),
       { threshold: 0.12 }
     );
 
-    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-    return () => observer.disconnect();
+    const elements = document.querySelectorAll(".reveal");
+
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      elements.forEach((element) => observer.unobserve(element));
+      observer.disconnect();
+    };
   }, []);
 
   return (
@@ -82,15 +131,20 @@ export default function Home() {
 
         <div className="heroContent">
           <p className="eyebrow">BLACK & GOLD WEEKEND</p>
+
           <h1>
             Pittsburgh
             <span>Bachelor Trip.</span>
           </h1>
+
           <p className="heroCopy">
-            Breakfast sandwiches. Whitewater. Baseball. Bottles.
-            One final send-off in the Steel City.
+            Breakfast sandwiches. Whitewater. Baseball. Bottles. One final
+            send-off in the Steel City.
           </p>
-          <a href="#plan" className="button">View itinerary ↓</a>
+
+          <a href="#plan" className="button">
+            View itinerary ↓
+          </a>
         </div>
 
         <div className="heroFooter">
@@ -98,6 +152,7 @@ export default function Home() {
             <small>HOME BASE</small>
             <strong>1824 Sidney Street</strong>
           </div>
+
           <div className="mark">04</div>
         </div>
       </section>
@@ -105,32 +160,43 @@ export default function Home() {
       <section id="plan" className="plan">
         <div className="intro reveal">
           <p className="eyebrow">THE PLAN</p>
-          <h2>Four days.<br />Zero wasted time.</h2>
+
+          <h2>
+            Four days.
+            <br />
+            Zero wasted time.
+          </h2>
         </div>
 
         <div className="cards">
-          {days.map(day => (
+          {days.map((day) => (
             <article className="dayCard reveal" key={day.number}>
               <div className="dayTop">
                 <div className="dayMeta">
                   <span className="dayNumber">{day.number}</span>
+
                   <div>
                     <p>{day.day}</p>
                     <small>{day.date}</small>
                   </div>
                 </div>
+
                 <span className="tag">{day.tag}</span>
               </div>
 
               <h3>{day.title}</h3>
 
               <div className="events">
-                {day.events.map(([time, title, text]) => (
-                  <div className="event" key={`${time}-${title}`}>
+                {day.events.map(([time, title, text], eventIndex) => (
+                  <div
+                    className="event"
+                    key={`${day.number}-${eventIndex}-${time}-${title}`}
+                  >
                     <time>{time}</time>
+
                     <div>
                       <h4>{title}</h4>
-                      <p>{text}</p>
+                      {text && <p>{text}</p>}
                     </div>
                   </div>
                 ))}
@@ -138,6 +204,7 @@ export default function Home() {
             </article>
           ))}
         </div>
+      </section>
 
       <footer>
         <span>BLACK & GOLD WEEKEND</span>
