@@ -10,11 +10,11 @@ const days = [
     tag: "Arrival",
     title: "Convoy to Pittsburgh",
     events: [
-      ["8:00 AM", "Meet at Sourdough Garden", "Breakfast sandwich, coffee, and cookie for everyone. Al receives the ceremonial pack of beef jerky."],
-      ["8:30 AM", "Convoy departure", "Approximately 5.5 hours on the road. Target arrival at the Airbnb by 3:00 PM."],
-      ["3:00 PM", "Check in", "1824 Sidney Street. Unpack, settle in, and get ready for dinner."],
-      ["7:00 PM", "Dinner at Eddie V’s", "Start the weekend properly."],
-      ["Night", "South Side bars + karaoke", "Explore the area and scout the best spots for the rest of the weekend."]
+      ["8:00 AM", "Meet at Sourdough Garden", "Breakfast sandwich, coffee, and cookie for everyone. Al will get a pack of beef jerky."],
+      ["8:30 AM", "Convoy down", "Approximately 5.5 hours on the road. Target arrival at the Airbnb by 3:00 PM."],
+      ["3:00 PM", "Check in", "1824 Sidney Street. Unpack & settle in."],
+      ["7:00 PM", "Dinner at Eddie V’s"],
+      ["Night", "South Side Bars", "Explore the South Side, Dee's Cafe, Karaoke, Scout the best spots for the weekend, ."]
     ]
   },
   {
