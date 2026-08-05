@@ -44,7 +44,7 @@ const days = [
         "Check into Airbnb",
         "1824 Sidney Street. Settle In.",
       ],
-      ["7:00 PM", "Dinner at Eddie V’s", "Steak and Seafood"],
+      ["7:00 PM", "Dinner at Eddie V’s", "Steak and Seafood."],
       [
         "Night",
         "South Side bars",
@@ -95,7 +95,7 @@ const days = [
         "Rest and reset",
         "Recover, eat, hydrate with purple Powerade, free day, mossmanz.",
       ],
-      ["4:00 PM", "Mass at St. Paul Cathedral", "mandatory."],
+      ["4:00 PM", "Mass at St. Paul Cathedral", "Mandatory. I want to see 15 mans there for a 45 min mass."],
       [
         "6:40 PM",
         "Pirates game at PNC Park",
@@ -227,7 +227,7 @@ export default function Home() {
           </h1>
 
           <p className="heroCopy">
-            A wonderful weekend with my best friends in Steel City.
+            A weekend with my best friends in Steel City.
           </p>
 
           <div className="countdownWrap">
