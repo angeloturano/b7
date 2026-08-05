@@ -4,6 +4,23 @@ import { useEffect } from "react";
 
 const days = [
   {
+    const crew = [
+  "💰 Rex Diamond — The High Roller",
+  "🕴 Larry King — The Puppetmaster",
+  "💵 Saul Wosserman — The Taxman",
+  "🏦 Tim Shapiro — Wall Street",
+  "🥇 Cameron Buck — The Gold Baron",
+  "🤖 Jonah Jonah — AI Wizard",
+  "🌎 Isaac Wiseman — The Philanthropist",
+  "🥩 Ezekiel Katz — Smoke King",
+  "💍 Jebidiah Ackerman — The In-Law",
+  "⌚ Nathaniel Schwartz — Watch Lord",
+  "🩺 Seth Rosenberg — The Specialist",
+  "🩺 Dr. Blaga — Chief Medical Officer",
+  "🎬 Zev Finkle — The Talent Manager",
+  "📊 Evin Levitt — Chief Financial Officer",
+  "🏒 Aram Azarian — Super Agent",
+];
     number: "01",
     day: "Thursday",
     date: "August 6",
