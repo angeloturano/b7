@@ -4,18 +4,18 @@ import { useEffect } from "react";
 
 const crew = [
   "💰 Rex Diamond — Ponzi Artist",
-  "🕴 Larry King — The Puppetmaster",
+  "🕴 Larry King — Puppetmaster",
   "💵 Saul Wosserman — Tax Collector",
   "🏦 Tim Shapiro — Swarthy Banker",
   "🥇 Cameron Buck — Precious Metals",
   "🤖 Jonah Jonah — AI Wizard",
-  "🌎 Isaac Wiseman — Philanthropist",
-  "🥩 Ezekiel Katz — Smoke King",
+  "🌎 Isaac Wiseman — Global Charity ",
+  "🛠️ Ezekiel Katz — Offshore Drilling Rigs",
   "💍 Jebidiah Ackerman — Married into it",
   "⌚ Nathaniel Schwartz — Watch Collector",
   "🩺 Seth Rosenberg — Gynecologist",
   "🩺 Dr. Blaga — Chief Medical Officer",
-  "🎬 Zev Finkle — Talent Manager",
+  "🎬 Zev Finkle — OF Talent Manager",
   "📊 Evin Levitt — Accountant",
   "🏒 Aram Azarian — Hockey Agent",
 ];
@@ -37,9 +37,9 @@ const days = [
       [
         "3:00 PM",
         "Check into Airbnb",
-        "1824 Sidney Street. Unpack and settle in.",
+        "1824 Sidney Street. Settle In.",
       ],
-      ["7:00 PM", "Dinner at Eddie V’s"],
+      ["7:00 PM", "Dinner at Eddie V’s", "Steak and Seafood"],
       [
         "Night",
         "South Side bars",
@@ -62,19 +62,23 @@ const days = [
       [
         "10:00 AM",
         "Rafting begins",
-        "Whitewater rafting and a full day on the river.",
+        "A day on the river.",
       ],
       [
         "Drive Back",
         "Pizza Lupo",
-        "Possible stop on the way back.",
+        "Have a world-class pie on the way back.",
       ],
       [
         "5:00 PM",
         "Back at the Airbnb",
         "Rest, shower, and reset.",
       ],
-      ["Night", "Rivers Casino", "Someone is due to win big."],
+      [
+        "Evening",
+        "rexhexy marathon - DRINK TO DAT",
+      ],
+      ["Night", "BET RIVERS CASINO", "Someone is due to win BIG."],
     ],
   },
   {
@@ -82,14 +86,14 @@ const days = [
     day: "Saturday",
     date: "August 8",
     tag: "Game Day",
-    title: "Church + Baseball",
+    title: "Ball Game",
     events: [
       [
         "Morning to Afternoon",
         "Rest and reset",
-        "Recover, eat, hydrate with purple Powerade, and Mossman’s.",
+        "Recover, eat, hydrate with purple Powerade, free day, mossmanz.",
       ],
-      ["4:00 PM", "Mass at St. Paul Cathedral"],
+      ["4:00 PM", "Mass at St. Paul Cathedral","mandatory."],
       [
         "6:40 PM",
         "Pirates game at PNC Park",
@@ -103,7 +107,7 @@ const days = [
     day: "Sunday",
     date: "August 9",
     tag: "Home",
-    title: "The Journey Home",
+    title: "Back to Reality",
     events: [
       [
         "Morning",
