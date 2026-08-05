@@ -2,8 +2,6 @@
 
 import { useEffect } from "react";
 
-const days = [
-  {
     const crew = [
   "💰 Rex Diamond — Ponzi Artist",
   "🕴 Larry King — The Puppetmaster",
@@ -21,6 +19,8 @@ const days = [
   "📊 Evin Levitt — Accountant",
   "🏒 Aram Azarian — Hockey Agent",
 ];
+const days = [
+  {
     number: "01",
     day: "Thursday",
     date: "August 6",
@@ -159,28 +159,34 @@ export default function Home() {
         </div>
 
         <div className="heroFooter">
-  <div className="pack">
-    <small>ESSENTIALS</small>
+          <div className="pack">
+            <small>ESSENTIALS</small>
 
-    <ul>
-      <li>🛂 Passport</li>
-      <li>👔 Steakhouse Outfit</li>
-      <li>🩳 Rafting Swimsuit</li>
-      <li>🧥 Rain Jacket</li>
-      <li>🍾 Club Clothes</li>
-    </ul>
-  </div>
+            <ul>
+              <li>🛂 Passport</li>
+              <li>👔 Steakhouse Outfit</li>
+              <li>🩳 Rafting Swimsuit</li>
+              <li>🧥 Rain Jacket</li>
+              <li>🍾 Club Clothes</li>
+            </ul>
+          </div>
 
-  <div className="homeBase">
-    <small>HOME BASE</small>
+          <div className="homeBase">
+            <small>HOME BASE</small>
+            <strong>1824 Sidney Street</strong>
+            <span>Pittsburgh, Pennsylvania</span>
+          </div>
 
-    <strong>1824 Sidney Street</strong>
+          <div className="crew">
+            <small>CREW</small>
 
-    <span>Pittsburgh, Pennsylvania</span>
-  </div>
-
-  <div className="mark">04</div>
-</div>
+            <ul>
+              {crew.map((person) => (
+                <li key={person}>{person}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section id="plan" className="plan">
