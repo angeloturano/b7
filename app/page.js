@@ -19,6 +19,7 @@ const crew = [
   "📊 Evin Levitt — Accountant",
   "🏒 Aram Azarian — Hockey Agent",
 ];
+
 const days = [
   {
     number: "01",
@@ -63,7 +64,11 @@ const days = [
         "Rafting begins",
         "Whitewater rafting and a full day on the river.",
       ],
-      ["Drive Back", "Pizza Lupo on the way back?"],
+      [
+        "Drive Back",
+        "Pizza Lupo",
+        "Possible stop on the way back.",
+      ],
       [
         "5:00 PM",
         "Back at the Airbnb",
@@ -112,21 +117,29 @@ const days = [
 export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) =>
+      (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
           }
-        }),
-      { threshold: 0.12 }
+        });
+      },
+      {
+        threshold: 0.12,
+      }
     );
 
     const elements = document.querySelectorAll(".reveal");
 
-    elements.forEach((element) => observer.observe(element));
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
 
     return () => {
-      elements.forEach((element) => observer.unobserve(element));
+      elements.forEach((element) => {
+        observer.unobserve(element);
+      });
+
       observer.disconnect();
     };
   }, []);
@@ -157,41 +170,33 @@ export default function Home() {
           </a>
         </div>
 
-    <section className="heroFooter">
-  <div className="pack">
-    <small>ESSENTIALS</small>
+        <div className="heroFooter">
+          <div className="pack">
+            <small>ESSENTIALS</small>
 
-    <ul>
-      <li>🛂 Passport</li>
-      <li>👔 Steakhouse Outfit</li>
-      <li>🩳 Rafting Swimsuit</li>
-      <li>🧥 Rain Jacket</li>
-      <li>🍾 Club Clothes</li>
-    </ul>
-  </div>
+            <ul>
+              <li>🛂 Passport</li>
+              <li>👔 Steakhouse Outfit</li>
+              <li>🩳 Rafting Swimsuit</li>
+              <li>🧥 Rain Jacket</li>
+              <li>🍾 Club Clothes</li>
+            </ul>
+          </div>
 
-  <div className="crew">
-    <small>CREW</small>
-
-    <ul>
-      {crew.map((person) => (
-        <li key={person}>{person}</li>
-      ))}
-    </ul>
-  </div>
-
-  <div className="homeBase">
-    <small>HOME BASE</small>
-    <strong>1824 Sidney Street</strong>
-    <span>Pittsburgh, Pennsylvania</span>
-  </div>
-</section>
+          <div className="crew">
+            <small>CREW</small>
 
             <ul>
               {crew.map((person) => (
                 <li key={person}>{person}</li>
               ))}
             </ul>
+          </div>
+
+          <div className="homeBase">
+            <small>HOME BASE</small>
+            <strong>1824 Sidney Street</strong>
+            <span>Pittsburgh, Pennsylvania</span>
           </div>
         </div>
       </section>
