@@ -33,6 +33,11 @@ const days = [
         "Meet at Sourdough Garden",
         "Everyone will receive a breakfast sandwich, coffee, and cookie. Zmou will get a pack of beef jerky.",
       ],
+      [
+        "Vehicles",
+        "4 Cars",
+        "1. Rex, Vic, Mel, Buck | 2. Pete, Borsk, Doug, Coop | 3. Tommy, Evan, Tim, Pezi | 4. Zmou, Rob, Janis",
+      ],
       ["8:30 AM", "Convoy down", "~5.5 hours on the road."],
       [
         "3:00 PM",
