@@ -501,3 +501,76 @@ footer {
     columns: 1;
   }
 }
+.countdownWrap {
+  margin: 28px 0 32px;
+}
+
+.countdownTitle {
+  margin: 0 0 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.countdownItem {
+  width: 92px;
+  padding: 17px 10px 15px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.countdownItem strong {
+  display: block;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.countdownItem span {
+  display: block;
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .countdownItem {
+    width: auto;
+    min-width: 0;
+    padding: 13px 4px 12px;
+    border-radius: 14px;
+  }
+
+  .countdownItem strong {
+    font-size: 23px;
+  }
+
+  .countdownItem span {
+    font-size: 7px;
+    letter-spacing: 0.7px;
+  }
+}
