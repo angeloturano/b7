@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const crew = [
   "💰 Rex Diamond — Ponzi Artist",
@@ -79,10 +79,7 @@ const days = [
         "Back at the Airbnb",
         "Rest, shower, and reset.",
       ],
-      [
-        "Evening",
-        "rexhexy marathon - DRINK TO DAT",
-      ],
+      ["Evening", "rexhexy marathon - DRINK TO DAT"],
       ["Night", "BET RIVERS CASINO", "Someone is due to win BIG."],
     ],
   },
@@ -98,7 +95,7 @@ const days = [
         "Rest and reset",
         "Recover, eat, hydrate with purple Powerade, free day, mossmanz.",
       ],
-      ["4:00 PM", "Mass at St. Paul Cathedral","mandatory."],
+      ["4:00 PM", "Mass at St. Paul Cathedral", "mandatory."],
       [
         "6:40 PM",
         "Pirates game at PNC Park",
@@ -123,7 +120,66 @@ const days = [
   },
 ];
 
+function getTimeRemaining() {
+  const tripStart = new Date("2026-08-06T08:00:00-04:00").getTime();
+  const difference = tripStart - Date.now();
+
+  if (difference <= 0) {
+    return {
+      days: "00",
+      hours: "00",
+      minutes: "00",
+      seconds: "00",
+    };
+  }
+
+  return {
+    days: String(
+      Math.floor(difference / (1000 * 60 * 60 * 24))
+    ).padStart(2, "0"),
+
+    hours: String(
+      Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) /
+          (1000 * 60 * 60)
+      )
+    ).padStart(2, "0"),
+
+    minutes: String(
+      Math.floor(
+        (difference % (1000 * 60 * 60)) /
+          (1000 * 60)
+      )
+    ).padStart(2, "0"),
+
+    seconds: String(
+      Math.floor((difference % (1000 * 60)) / 1000)
+    ).padStart(2, "0"),
+  };
+}
+
 export default function Home() {
+  const [countdown, setCountdown] = useState({
+    days: "--",
+    hours: "--",
+    minutes: "--",
+    seconds: "--",
+  });
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      setCountdown(getTimeRemaining());
+    };
+
+    updateCountdown();
+
+    const timer = setInterval(updateCountdown, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -173,6 +229,32 @@ export default function Home() {
           <p className="heroCopy">
             A wonderful weekend with my best friends in Steel City.
           </p>
+
+          <div className="countdownWrap">
+            <p className="countdownTitle">The weekend begins in</p>
+
+            <div className="countdown">
+              <div className="countdownItem">
+                <strong>{countdown.days}</strong>
+                <span>Days</span>
+              </div>
+
+              <div className="countdownItem">
+                <strong>{countdown.hours}</strong>
+                <span>Hours</span>
+              </div>
+
+              <div className="countdownItem">
+                <strong>{countdown.minutes}</strong>
+                <span>Minutes</span>
+              </div>
+
+              <div className="countdownItem">
+                <strong>{countdown.seconds}</strong>
+                <span>Seconds</span>
+              </div>
+            </div>
+          </div>
 
           <a href="#plan" className="button">
             Begin the Weekend ↓
