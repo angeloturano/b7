@@ -349,3 +349,72 @@ footer {
     transition: none;
   }
 }
+/* ---------- Hero Footer ---------- */
+
+.heroFooter {
+  display: grid;
+  grid-template-columns: 300px 1fr auto;
+  align-items: end;
+  gap: 50px;
+
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+
+.pack {
+  display: flex;
+  flex-direction: column;
+}
+
+.pack small {
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .22em;
+  margin-bottom: 16px;
+}
+
+.pack ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pack li {
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.homeBase {
+  display: flex;
+  flex-direction: column;
+}
+
+.homeBase small {
+  color: var(--gold);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .22em;
+  margin-bottom: 14px;
+}
+
+.homeBase strong {
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: -.04em;
+  font-weight: 900;
+  color: white;
+}
+
+.homeBase span {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.mark {
+  font-size: clamp(4rem,8vw,6rem);
+  color: rgba(255,182,18,.35);
+}
