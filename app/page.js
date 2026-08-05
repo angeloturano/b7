@@ -52,11 +52,7 @@ const days = [
         "Back at the Airbnb",
         "Rest, shower, and reset.",
       ],
-      [
-        "Night",
-        "Rivers Casino",
-        "Someone is due to win big.",
-      ],
+      ["Night", "Rivers Casino", "Someone is due to win big."],
     ],
   },
   {
@@ -130,8 +126,6 @@ export default function Home() {
         </nav>
 
         <div className="heroContent">
-          
-
           <h1>
             Pittsburgh
             <span>Bachelor Trip.</span>
@@ -143,7 +137,7 @@ export default function Home() {
           </p>
 
           <a href="#plan" className="button">
-            View itinerary ↓
+            Begin the Weekend ↓
           </a>
         </div>
 
@@ -158,8 +152,6 @@ export default function Home() {
       </section>
 
       <section id="plan" className="plan">
-
-
         <div className="cards">
           {days.map((day) => (
             <article className="dayCard reveal" key={day.number}>
@@ -199,8 +191,8 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>BLACK & GOLD WEEKEND</span>
-        <span>PITTSBURGH · 2026</span>
+        <span>PITTSBURGH BACHELOR TRIP</span>
+        <span>AUGUST 6–9, 2026</span>
       </footer>
     </main>
   );
