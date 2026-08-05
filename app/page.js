@@ -157,9 +157,10 @@ export default function Home() {
           </a>
         </div>
 
-      <div className="heroFooter">
+    <section className="heroFooter">
   <div className="pack">
     <small>ESSENTIALS</small>
+
     <ul>
       <li>🛂 Passport</li>
       <li>👔 Steakhouse Outfit</li>
@@ -171,9 +172,12 @@ export default function Home() {
 
   <div className="crew">
     <small>CREW</small>
-    {crew.map((member) => (
-      <span key={member}>{member}</span>
-    ))}
+
+    <ul>
+      {crew.map((person) => (
+        <li key={person}>{person}</li>
+      ))}
+    </ul>
   </div>
 
   <div className="homeBase">
@@ -181,7 +185,7 @@ export default function Home() {
     <strong>1824 Sidney Street</strong>
     <span>Pittsburgh, Pennsylvania</span>
   </div>
-</div>
+</section>
 
             <ul>
               {crew.map((person) => (
