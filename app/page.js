@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-    const crew = [
+const crew = [
   "💰 Rex Diamond — Ponzi Artist",
   "🕴 Larry King — The Puppetmaster",
   "💵 Saul Wosserman — Tax Collector",
