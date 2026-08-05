@@ -144,7 +144,7 @@ h1 span {
 .plan {
   width: min(1180px, calc(100% - 34px));
   margin: 0 auto;
-  padding: 120px 0;
+  padding: 55px 0 120px;
 }
 
 .intro h2,
