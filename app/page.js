@@ -142,13 +142,28 @@ export default function Home() {
         </div>
 
         <div className="heroFooter">
-          <div>
-            <small>HOME BASE</small>
-            <strong>1824 Sidney Street</strong>
-          </div>
+  <div className="pack">
+    <small>ESSENTIALS</small>
 
-          <div className="mark">04</div>
-        </div>
+    <ul>
+      <li>🛂 Passport</li>
+      <li>👔 Steakhouse Outfit</li>
+      <li>🩳 Rafting Swimsuit</li>
+      <li>🧥 Rain Jacket</li>
+      <li>🍾 Club Clothes</li>
+    </ul>
+  </div>
+
+  <div className="homeBase">
+    <small>HOME BASE</small>
+
+    <strong>1824 Sidney Street</strong>
+
+    <span>Pittsburgh, Pennsylvania</span>
+  </div>
+
+  <div className="mark">04</div>
+</div>
       </section>
 
       <section id="plan" className="plan">
