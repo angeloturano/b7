@@ -149,8 +149,7 @@ export default function Home() {
           </h1>
 
           <p className="heroCopy">
-            Breakfast sandwiches. Whitewater. Baseball. Bottles. One final
-            send-off in the Steel City.
+            A wonderful weekend with my best friends in Steel City.
           </p>
 
           <a href="#plan" className="button">
