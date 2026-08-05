@@ -170,14 +170,14 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="homeBase">
+          <div className="crew">
+            <small>CREW</small>
+    
+    <div className="homeBase">
             <small>HOME BASE</small>
             <strong>1824 Sidney Street</strong>
             <span>Pittsburgh, Pennsylvania</span>
           </div>
-
-          <div className="crew">
-            <small>CREW</small>
 
             <ul>
               {crew.map((person) => (
