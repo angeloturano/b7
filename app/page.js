@@ -157,27 +157,31 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="heroFooter">
-          <div className="pack">
-            <small>ESSENTIALS</small>
+      <div className="heroFooter">
+  <div className="pack">
+    <small>ESSENTIALS</small>
+    <ul>
+      <li>🛂 Passport</li>
+      <li>👔 Steakhouse Outfit</li>
+      <li>🩳 Rafting Swimsuit</li>
+      <li>🧥 Rain Jacket</li>
+      <li>🍾 Club Clothes</li>
+    </ul>
+  </div>
 
-            <ul>
-              <li>🛂 Passport</li>
-              <li>👔 Steakhouse Outfit</li>
-              <li>🩳 Rafting Swimsuit</li>
-              <li>🧥 Rain Jacket</li>
-              <li>🍾 Club Clothes</li>
-            </ul>
-          </div>
+  <div className="crew">
+    <small>CREW</small>
+    {crew.map((member) => (
+      <span key={member}>{member}</span>
+    ))}
+  </div>
 
-          <div className="crew">
-            <small>CREW</small>
-    
-    <div className="homeBase">
-            <small>HOME BASE</small>
-            <strong>1824 Sidney Street</strong>
-            <span>Pittsburgh, Pennsylvania</span>
-          </div>
+  <div className="homeBase">
+    <small>HOME BASE</small>
+    <strong>1824 Sidney Street</strong>
+    <span>Pittsburgh, Pennsylvania</span>
+  </div>
+</div>
 
             <ul>
               {crew.map((person) => (
