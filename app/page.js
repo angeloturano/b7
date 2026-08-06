@@ -2,23 +2,23 @@
 
 import { useEffect, useState } from "react";
 
-/*const crew = [
-  "💰 Rex Diamond — Ponzi Artist",
-  "🕴 Larry King — Puppetmaster",
-  "💵 Saul Wosserman — Tax Collector",
-  "🏦 Tim Shapiro — Swarthy Banker",
-  "🥇 Cameron Buck — Precious Metals",
-  "🤖 Jonah Jonah — AI Wizard",
-  "🌎 Isaac Wiseman — Global Charity ",
-  "🛠️ Ezekiel Katz — Offshore Drilling Rigs",
-  "💍 Jebidiah Ackerman — Married into it",
-  "⌚ Nathaniel Schwartz — Watch Collector",
-  "🩺 Seth Rosenberg — Gynecologist",
-  "🩺 Dr. Blaga — Chief Medical Officer",
-  "🎬 Zev Finkle — OF Talent Manager",
-  "📊 Evin Levitt — Accountant",
-  "🏒 Aram Azarian — Hockey Agent",
-];*/
+const crew = [
+  "💰 Rex",
+  "🕴 Coop",
+  "💵 Doug",
+  "🏦 Tim",
+  "🥇 Buck",
+  "🤖 Janis",
+  "🌎 Borsk ",
+  "🛠️ Big Pete",
+  "💍 Pezi",
+  "⌚ Tommy",
+  "🩺 Robloo",
+  "🩺 Vic",
+  "🎬 AL",
+  "📊 Evin",
+  "🏒 Mel",
+];
 
 const days = [
   {
