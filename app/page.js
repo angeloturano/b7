@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const crew = [
+/*const crew = [
   "💰 Rex Diamond — Ponzi Artist",
   "🕴 Larry King — Puppetmaster",
   "💵 Saul Wosserman — Tax Collector",
@@ -18,7 +18,7 @@ const crew = [
   "🎬 Zev Finkle — OF Talent Manager",
   "📊 Evin Levitt — Accountant",
   "🏒 Aram Azarian — Hockey Agent",
-];
+];*/
 
 const days = [
   {
